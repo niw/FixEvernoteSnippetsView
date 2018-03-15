@@ -8,9 +8,10 @@ A dynamic link library that patches [Evernote](https://evernote.com/) snippets v
 Usage
 -----
 
-Inject this dynamic link library using `DYLD_INSERT_LIBRARIES`.
-See `dyld(1)` for the details.
+Launch Evernote with injecting this dynamic link library using `DYLD_INSERT_LIBRARIES`. Simply using `make` to do so. It requires Xcode.
 
-    env DYLD_INSERT_LIBRARIES=/path/to/libFixEvernoteSnippetsView.dylib /Applications/Evernote.app/Contents/MacOS/Evernote
+    make
+
+See `Makefile` and `dyld(1)` for the details.
 
 It’s also possible to make a scripting addition to inject the patch, but I prefer to ask Evernote insiders to fix this.
