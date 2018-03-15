@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
         CFURLGetFSRef((__bridge CFURLRef)url, &fsref);
 
         const LSApplicationParameters params = {
-            .application = &fsref,
+            .application = &fsref
         };
         ProcessSerialNumber psn;
         return LSOpenApplication(&params, &psn);
