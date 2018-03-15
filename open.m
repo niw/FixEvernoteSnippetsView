@@ -15,10 +15,8 @@ int main(int argc, const char * argv[]) {
         FSRef fsref;
         CFURLGetFSRef((__bridge CFURLRef)url, &fsref);
 
-        NSDictionary * const environment = @{};
         const LSApplicationParameters params = {
             .application = &fsref,
-            .environment = (__bridge CFDictionaryRef)environment
         };
         ProcessSerialNumber psn;
         return LSOpenApplication(&params, &psn);
